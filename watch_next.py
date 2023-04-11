@@ -19,12 +19,9 @@ def watch_next(movie):
             # checking the similarity of the parameter to the descriptions of the movies from the txt file
             similarity = nlp(description).similarity(model_sentence)
             
-            # printing a statement 
-            print("We recommend the following movies:\n")
-            
             # if the similarity between the descriptions are above 0.5 
             # print out the title of the movie
-            if similarity >= 0.5:
+            if similarity >= 0.85:
                 print(line[:8])
             
 
